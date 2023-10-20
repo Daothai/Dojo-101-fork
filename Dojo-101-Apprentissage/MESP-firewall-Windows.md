@@ -9,24 +9,25 @@ Ce contenu est publié sous licence "GNU GENERAL PUBLIC LICENSE Version 3" et le
 ## Ressources
 
 [Gestes professionnels](https://github.com/Aif4thah/Dojo-101)
+[Mitre Attack](https://attack.mitre.org/)
 [nmap](https://nmap.org/)
+
 
 ## Contexte
 
-1. Déployer une machine Linux
+1. Déployer une machine Windows
 
-2. Implémenter la configuration suivante:
+2. Lister les règles firewall grace à powershell et la GUI
 
-Interdire tous les flux en entrée par défaut, mais permettre les connexions déjà établies (statefull)
-Autoriser DHCP
-Autoriser DNS uniquement vers 8.8.8.8
-Autoriser HTTPS sortant et SSH entrant
-Autoriser HTTP uniquement vers le domaine taisen.eu
-Interdire tous les autres flux en sortie
-Activer le forwarding des trames et rediriger vers la passerelle par défaut
-Dropper ICMP
+3. Configurer une politique par défaut "Drop" pour les flux entrants
 
-3. Vérifier à l'aide de l'outil **nmap** que le firewall fonctionne correctement
+4. Supprimer les règles inutiles ou trop permissives concernant le trafic entrant
+
+5. à l'aide du MITRE Attack, créer des règles "deny" pertinentes concernant les flux sortants (10 minimum)
+
+6. Vérifier à l'aide de l'outil **nmap**, ou d'autres commandes que le firewall fonctionne correctement
+
+7. Désactiver les réponses ICMP et les message TCP Reset lorsqu'il n'y a pas d'applications sur le port concerné
 
 
 ## Modalités pédagogiques
@@ -39,7 +40,7 @@ lecture de la procédure
 
 ## Livrables
 
-captures décran des commandes `uname -a`, `date`, et resutlat des scan nmap
+captures d’écran des règles firewalls (powershell ou GUI)
 
 Procédure de configuration et de vérification au format markdown
 

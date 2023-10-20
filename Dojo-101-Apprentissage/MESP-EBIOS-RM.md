@@ -2,7 +2,7 @@
 
 Vous êtes le RSSI d'une Startup et vous devez mener une AdR EBIOS RM.
 
-Durée: 5 jours
+Durée: 4 jours
 
 Ce contenu est publié sous licence "GNU GENERAL PUBLIC LICENSE Version 3" et les sources sont sur le projet Github Dojo-101, merci d'en tenir compte d'en vos usages.
 
@@ -10,29 +10,20 @@ Ce contenu est publié sous licence "GNU GENERAL PUBLIC LICENSE Version 3" et le
 
 [Guide EBIOS RM](https://www.ssi.gouv.fr/guide/la-methode-ebios-risk-manager-le-guide/)
 [Gestes professionnels](https://github.com/Aif4thah/Dojo-101)
+[Mitre Attack](https://attack.mitre.org/)
+
 
 ## Contexte
-
-1. Donnez les définitions des critères de sécurité "DICT" (1pt)
-
-2. citez 3 réglementations liées à la sécurité des systèmes d'information, en précisant leurs domaines d'application (1 pt)
-
-3. Quelles sont les 4 grandes étapes de la norme ISO 27001 ? (1pt)
-
-4. Qu'est-ce que le RGS ? (1 pt)
-
-5. Qu'est-ce que la "déclaration d'applicabilité" ? (1pt)
-
-6. Qu'est-ce que le risque résiduel ? (1pt)
-
 
 Vous êtes le RSSI d'une Startup de 6 personnes spécialisée dans l'obtention de la certification ISO27001 pour ses clients.
 
 Le système d'information se compose de:
 
 * 4 machines nomades pour les consultants, basés à Paris et mobiles dans toute la France
-* 2 Postes fixes pour le directeur et la responsable RH, basés à Aix-en-Provence
+* 2 Postes fixes pour le directeur et le responsable RH, basés à Aix-en-Provence
 * 1 Application cloud fournissant aux clients tous les éléments concernant le suivi de l'avancement de leurs certifications ainsi que le détail des analyses de risques menées par les consultants
+
+Chaque utilisateur utilise le service VPN de sont choix. L'application cloud est exposée sur internet, protégée par un WAF et une authentification par login + mot de passe (les comptes sont dans la BDD de l'application). 
 
 En tant que responsable de la gestion des risques, vous avez pour mission de mener une analyse EBIOS RM afin d'établir un premier plan de traitement des risques.
 
@@ -66,7 +57,7 @@ Lecture du rapport et présentation à l'oral
 
 ## Critères de performance
 
-- respect de la méthode EBIOS RM: 4 points
-- Formalisme et synthétisme: 4 points
-- Pertinence de risques identifiés: 4 points
-- Pertinence des mesures de sécurité retenues: 4 points
+- respect de la méthode EBIOS RM
+- Formalisme et synthétisme
+- Pertinence de risques identifiés
+- Pertinence des mesures de sécurité retenues

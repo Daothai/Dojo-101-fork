@@ -25,6 +25,11 @@ $var |gm #lister les membres (proprietés et fonctions)
 
 $var = @( 1,2,3 )
 
+## hashtable
+
+$hash = @{ Number = 1; Shape = "Square"; Color = "Blue"}
+
+
 ## afficher
 
 write-host "coucou $a" -foregroundColor Cyan
@@ -43,7 +48,7 @@ $var = (read-host ">>>").ToString()
 
 
 $Secure = Read-Host "saisissez un secret" -AsSecureString
-
+Get-Credential
 
 
 ## conditions et booléens
@@ -51,7 +56,7 @@ $Secure = Read-Host "saisissez un secret" -AsSecureString
 
 if($var.Contains('a')){ $true }else{ $false }
 
-## condition ternaire pwsh 7
+## condition ternaire (pwsh => 7)
 
 $var.Contains('a') ? $true : $false
 
@@ -70,15 +75,18 @@ alias %
 
 ## formater un resultat
 
-
 get-date
 get-date |ft *
 get-date |fl *
 
+## comparer un resultat
+
+$a = ps; code ; $b = ps
+Compare-Object -ReferenceObject $a -DifferenceObject $b
+
 ## Transformer un objet
 
-
-get-date |ConvertTo-Csv
+get-date | ConvertTo-Csv
 get-date | ConvertTo-html
 
 ## Manipuler les fichiers et les objets
@@ -86,7 +94,7 @@ get-date | ConvertTo-html
 Get-PSDrive |ConvertTo-Json > test.json
 cat .\test.json | ConvertFrom-Json
 
-# Storage
+## Storage
 
 get-disk
 get-volume
@@ -98,7 +106,7 @@ Get-SmbShare
 ## IP
 
 Get-NetIPAddress
-Get-NetIPAddress |% { $_.IPAddress }
+(Get-NetIPAddress).IPAddress
 
 ## cartes réseaux 
 
@@ -113,7 +121,7 @@ Test-NetConnection google.fr -TraceRoute
 ## Web
 
 Invoke-WebRequest https://google.fr
-iwr https://raw.githubusercontent.com/Aif4thah/CShidori/main/LICENSE -outfile .\LICENSE
+iwr https://raw.githubusercontent.com/Aif4thah/dojo-101/main/LICENSE -outfile .\LICENSE
 
 ## API
 
@@ -134,9 +142,9 @@ Add-Type -AssemblyName System.Web
 
 ## Excrite, lire
 
-
 write "write-host 'coucou' -foregroundColor Cyan" > test.ps1
 gc test.ps1
+gc test.ps1 | Format-Hex
 
 
 ## Lire les permission
@@ -187,8 +195,8 @@ Get-LocalGroup Admin* |Get-LocalGroupMember
 
 ## logs
 
-
-Get-EventLog -LogName *
+Get-EventLog -List
+Get-EventLog -LogName "Security"
 
 
 ## volume registry
@@ -427,5 +435,6 @@ $BasicTestObject.Multiply(5, 2)
 
 $job = Start-Job -ScriptBlock { Get-WinEvent -Log System }
 $job | Select-Object -Property *
+Stop-Job $job
 
 

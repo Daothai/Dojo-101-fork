@@ -8,9 +8,15 @@ Ce contenu est publié sous licence "GNU GENERAL PUBLIC LICENSE Version 3" et le
 
 ## Ressources
 
-* Guide CIS / ANSSI
-* Referentiel PASSI
+* [Guide CIS](https://github.com/cismirror/old-benchmarks-archive)
+* [Guides ANSSI](https://www.ssi.gouv.fr/administration/bonnes-pratiques/)
+* [Referentiel PASSI](https://www.ssi.gouv.fr/actualite/publication-du-referentiel-dexigences-applicable-aux-prestataires-daudit-de-la-securite-des-systemes-dinformation-passi/)
 * [Gestes professionnels](https://github.com/Aif4thah/Dojo-101)
+* [bloodhound](https://github.com/BloodHoundAD/BloodHound)
+* [Sharphound](https://github.com/BloodHoundAD/SharpHound)
+* [Nuclei](https://github.com/projectdiscovery/nuclei)
+* [Privesc](https://github.com/carlospolop/PEASS-ng)
+
 
 ## Contexte
 
@@ -32,7 +38,9 @@ Relecture par le formateur du rapport d'audit finalisé
 
 ## Livrables
 
-Rapport d'audit répondant aux exigences PASSI
+* Diagramme de Gant ou Kanban détaillant la méthodologie que vous allez appliquer
+* Sorties de tous les outils cités en Ressources
+* Rapport d'audit répondant aux exigences du référentiel PASSI 
 
 ## Critères de performance
 
